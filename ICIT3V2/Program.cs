@@ -152,10 +152,15 @@ namespace ICIT3
         }
 
         delegate bool IsCanAddTeacher(string name);
-        public void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("231564678089431253246437575468467563264326234324");
-
+            int[] arr = new int[10];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = new Random().Next(0, 21);
+                Console.Write($"{arr[i]}  ");
+            }
+            Console.WriteLine();
             List<Teachers> teachers = (List<Teachers>)Create();
             Dictionary<string, ConsoleColor> colorDict = CreateDict(teachers);
             ConsoleKey key;
